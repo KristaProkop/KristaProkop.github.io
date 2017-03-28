@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -115,8 +116,36 @@
         <div class="container">
             <div class="row">
                 <div class="project shadow-large">
+                    <div class="project-image" >
+                        <div class="w3-content w3-section" style="max-width:500px">
+                            <img class="mySlides" src="images/twitter_imgs/login1.png">
+                             <img class="mySlides" src="images/twitter_imgs/home1.png">
+                             <img class="mySlides" src="images/twitter_imgs/modal1.png">
+                             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>CrypTweet</h3>
+                        <p>
+                            A tool to disseminate encrypted information via regular public tweets. Send encrypted tweets, retrieve others' encrypted tweets and decrypt them locally. Useful for resistance forces fighting oppressive government censorship!
+                        </p>
+                        <a href="https://github.com/KristaProkop/web_dev_examples/tree/master/django/twitter_site">View Code</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/video-background.jpg" />
+                        <div class="w3-content w3-section" style="max-width:500px">
+                            <img class="mySlides" src="images/twitter_imgs/login1.png">
+                             <img class="mySlides" src="images/twitter_imgs/home1.png">
+                             <img class="mySlides" src="images/twitter_imgs/modal1.png">
+                             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -132,23 +161,13 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/onepage.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/onepage.jpg" />
+                        <div class="w3-content w3-section" style="max-width:500px">
+                            <img class="mySlides" src="images/twitter_imgs/login1.png">
+                             <img class="mySlides" src="images/twitter_imgs/home1.png">
+                             <img class="mySlides" src="images/twitter_imgs/modal1.png">
+                             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -291,9 +310,63 @@
         </div>
     </footer>
     <!-- End footer -->
+    
+<div class="slideshow" data-interval="2000">
+   <div>
+       <img src="images/twitter_imgs/home1.png"/>
+   </div>
+   <div>
+       <img src="images/twitter_imgs/modal1.png"/>
+   </div>
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".slideshow").each(function(){$(this).children().not(":nth-child(2)").hide();});
+
+            $('.slideshow').each(function(){
+                var $this = $(this);
+                setInterval(function() {
+                    $this.children(':first')
+                    .fadeOut(1000)
+                    .next()
+                    .fadeIn(1000)
+                    .end()
+                    .appendTo($this);
+                },  parseInt($this.attr('data-interval'),10));
+            });
+                    });
+        </script>
+    <script>
+
+
+
+$(function() {
+    
+});
+
+        // var slideIndex = 1;
+        // showDivs(slideIndex);
+
+        // function plusDivs(n) {
+        //   showDivs(slideIndex += n);
+        // }
+
+        // function showDivs(n) {
+        //   var i;
+        //   var x = document.getElementsByClassName("mySlides");
+        //   if (n > x.length) {slideIndex = 1}    
+        //   if (n < 1) {slideIndex = x.length}
+        //   for (i = 0; i < x.length; i++) {
+        //      x[i].style.display = "none";  
+        //   }
+        //   x[slideIndex-1].style.display = "block";  
+        // }
+    </script>
+
 </body>
 
 </html>
