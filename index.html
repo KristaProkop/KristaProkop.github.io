@@ -40,9 +40,6 @@
             <li>
                 <a href="#contact">Contact</a>
             </li>
-            <li>
-                <a id="gh-link" href="https://github.com/KristaProkop/web_dev_examples">Github</a>
-            </li>
         </ul>
     </header>
     <!-- End header -->
@@ -51,7 +48,9 @@
         <div id="lead-content">
             <h1>Krista Prokopczyk</h1>
             <h2>Web Developer</h2>
-            <a href="https://github.com/KristaProkop/KristaProkop.github.io/raw/master/resume-pdf/prokopczyk_resume_2017.pdf" class="btn-rounded-white">Download Resume</a>                        
+            <a href="https://github.com/KristaProkop/KristaProkop.github.io/raw/master/resume-pdf/prokopczyk_resume_2017.pdf" class="btn-rounded-white">Download Resume</a> 
+            <a id="gh" href="https://github.com/KristaProkop/web_dev_examples" class="btn-rounded-white">Browse My Github</a>
+                                  
         </div>
         <!-- End #lead-content -->
 
@@ -190,8 +189,8 @@
     </div>
     <!-- End #education -->
 
-    <div class="container">
-        <div class="row">
+    <div id="skills" class="container">
+        <div  class="row">
             <div class="skills col-sm-6"">
                 <h2 class="heading">Languages &amp; Frameworks</h2>
                 <ul>
@@ -363,10 +362,6 @@
     </div>
     <!-- End #projects -->
 
-    
-
-
-
     <div id="contact">
         <h2>Talk to Me!</h2>
         <div id="contact-form">
@@ -417,28 +412,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.custom.js"></script>
 
-    <script>
-
-
-        var slideIndex = 1;
-            showDivs(slideIndex);
-
-            function plusDivs(n, set) {
-              showDivs(slideIndex += n, set);
-            }
-
-            function showDivs(n, set) {
-              var i;
-              var x = document.getElementsByClassName(set);
-              if (n > x.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = x.length}
-              for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";  
-              }
-              x[slideIndex-1].style.display = "block";  
-            }
-    </script>
 
 </body>
 
